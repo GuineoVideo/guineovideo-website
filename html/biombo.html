@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es" class="bg-brand-cream text-brand-black">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Biombo | Proyecto Principal</title>
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="../js/tailwind-config.js"></script>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body class="bg-brand-cream min-h-screen">
+
+  <!-- NAVBAR CON LOGO AMPLIADO -->
+  <nav class="bg-brand-cream/90 border-b border-brand-black/15 sticky top-0 z-50 backdrop-blur-md">
+    <div class="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
+      
+      <a href="../index.html" class="flex items-center gap-4 group">
+        <div class="bg-brand-yellow p-2 rounded-xl border border-brand-black/10 flex items-center justify-center transition group-hover:bg-brand-gold shadow-sm">
+          <img src="../assets/GUINEOLOGO.png" alt="Guineo Logo" class="h-12 md:h-16 w-auto object-contain">
+        </div>
+        <span class="font-black tracking-widest text-brand-black group-hover:text-brand-gold transition text-xl">
+          PRODUCCIONES
+        </span>
+      </a>
+
+      <div class="hidden md:flex space-x-8 text-sm font-extrabold tracking-wide text-brand-black">
+        <a href="biombo.html" class="text-brand-gold border-b-2 border-brand-gold pb-1">Biombo</a>
+        <a href="portafolio.html" class="hover:text-brand-gold transition">Portafolio</a>
+        <a href="equipo.html" class="hover:text-brand-gold transition">Equipo</a>
+        <a href="tienda.html" class="hover:text-brand-gold transition">Tienda</a>
+        <a href="aportacion.html" class="hover:text-brand-gold transition">Aportación</a>
+        <a href="contacto.html" class="hover:text-brand-gold transition">Contacto</a>
+      </div>
+
+      <button id="mobile-menu-btn" class="md:hidden text-brand-black hover:text-brand-gold focus:outline-none">
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+        </svg>
+      </button>
+    </div>
+
+    <div id="mobile-menu" class="hidden md:hidden bg-brand-cream border-b border-brand-black/15 px-6 py-4 flex flex-col space-y-3 font-bold text-brand-black">
+      <a href="biombo.html" class="text-brand-gold font-extrabold">Biombo</a>
+      <a href="portafolio.html" class="hover:text-brand-gold">Portafolio</a>
+      <a href="equipo.html" class="hover:text-brand-gold">Equipo</a>
+      <a href="tienda.html" class="hover:text-brand-gold">Tienda</a>
+      <a href="aportacion.html" class="hover:text-brand-gold">Aportación</a>
+      <a href="contacto.html" class="hover:text-brand-gold">Contacto</a>
+    </div>
+  </nav>
+
+  <header class="py-16 px-6 text-center max-w-4xl mx-auto">
+    <span class="bg-brand-yellow border border-brand-black/20 text-brand-black text-xs font-extrabold px-4 py-1.5 rounded-full uppercase tracking-widest shadow-sm">
+      En Producción
+    </span>
+    <h1 class="text-6xl md:text-8xl font-black mt-6 mb-6 text-brand-black">BIOMBO</h1>
+    <p class="text-brand-black/80 text-lg md:text-xl font-medium leading-relaxed">
+
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean et nisi ipsum. Nulla non bibendum mi. Sed ultricies pulvinar purus.
+
+    </p>
+  </header>
+
+  <section class="max-w-5xl mx-auto px-6 mb-16">
+    <div class="aspect-video bg-white border-2 border-brand-black/15 rounded-3xl shadow-lg flex items-center justify-center p-6">
+      <p class="text-brand-black/60 font-bold text-center">[ Tráiler Oficial de Biombo ]</p>
+    </div>
+  </section>
+
+  <section class="max-w-3xl mx-auto px-6 py-12 text-center border-t border-brand-black/15">
+    <h2 class="text-3xl font-black mb-3 text-brand-black">¿Deseas apoyar este proyecto?</h2>
+    <p class="text-brand-black/80 mb-6 font-medium">Puedes contribuir directamente a la financiación de Biombo.</p>
+    <a href="aportacion.html" class="inline-block bg-brand-yellow hover:bg-brand-gold text-brand-black border-2 border-brand-black/20 font-extrabold px-8 py-4 rounded-xl transition shadow-md">
+      Realizar una Aportación
+    </a>
+  </section>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
+
