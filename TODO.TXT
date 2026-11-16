@@ -1,0 +1,32 @@
+Home:
+  - Subir logo, quitar encuadre.
+  - Subir navbar 3/3
+  - Demo reel en el background (Temporarily video que me manden)
+
+Biombo:
+  - "Making of" gallery
+  - Background color changes to red
+  - Poner logo de biombo (reemplazar texto)
+  - When hover over biombo, animate biombos next to it
+
+Portafolio:
+  - Cambiar nombre a Proyectos
+  - Cambiar el grid a ser vertical
+  - Detail pop ups a la derecha (modal o hidden grid)
+  - When hovering over proyect, enlarge card slightly
+
+Equipo
+  - Cambiar nombre a Sobre Nosotrxs
+  - Incluir info preliminar de la compañia
+  - Cambiar card a spans y alternar posicion de fotos.
+
+Contacto
+  - Terminar formspree para enviar emails a info@guineovideo.com
+  - Add socials
+
+
+Tienda/Aportacion:
+  - Cambia aportacion a Apoyanos!
+  - Migrar codigo de madurando a estas pagina (Me van a dar caution tape png)
+
+Cambiar logo de guineo video a imagen que me dio josue
