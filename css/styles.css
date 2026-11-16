@@ -1,6 +1,11 @@
-/* Estilos globales */
+/* Estilos globales
+   El color de fondo por defecto va en <html> para que las clases bg-* del <body>
+   (bg-brand-red en Biombo, etc.) no queden tapadas por esta hoja. */
+html {
+  background-color: #74C3F7;
+}
+
 body {
-  background-color: #FFF0BD;
   color: #000000;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
@@ -9,7 +14,7 @@ html, body {
   cursor: url('../assets/mouse/normal_mouse.png') 0 0, auto;
 }
 
-a, button, input[type="button"], input[type="submit"], .interactive {
+a, button, input[type="button"], input[type="submit"], .interactive, .making-of-item {
   cursor: url('../assets/mouse/mouse_hover.png') 16 0, pointer;
 }
 
@@ -25,9 +30,206 @@ body:active {
   cursor: url('../assets/mouse/mouse_grab.png') 16 16, grabbing;
 }
 
-
-body.clicking, 
+body.clicking,
 body.clicking * {
   cursor: url('../assets/mouse/mouse_click.png') 0 0, auto !important;
 }
 
+
+/* =====================================================================
+   BIOMBO — logo con biombos a los lados que se despliegan en hover
+   ===================================================================== */
+.biombo-hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(0.75rem, 3vw, 2.5rem);
+  perspective: 900px;
+}
+
+.biombo-logo {
+  margin: 0;
+  position: relative;
+  z-index: 1;
+  transition: transform 0.4s ease;
+}
+
+.biombo-logo img {
+  max-height: clamp(7rem, 18vw, 13rem);
+  width: auto;
+  margin: 0 auto;
+}
+
+.biombo-hero:hover .biombo-logo {
+  transform: scale(1.05);
+}
+
+/* Un biombo = 4 paneles con bisagras. En reposo están plegados en zigzag;
+   en hover se abren y se mecen. */
+.biombo-screen {
+  display: flex;
+  transform-style: preserve-3d;
+}
+
+.biombo-panel {
+  display: block;
+  width: clamp(1.4rem, 4vw, 2.75rem);
+  height: clamp(6rem, 15vw, 11rem);
+  border: 3px solid #000;
+  background:
+    repeating-linear-gradient(0deg, transparent 0 18px, rgba(0, 0, 0, 0.12) 18px 20px),
+    #FFF0BD;
+  border-radius: 6px 6px 2px 2px;
+  transform-origin: left center;
+  transform: rotateY(calc(var(--zig) * 55deg));
+  transition: transform 0.55s cubic-bezier(0.34, 1.56, 0.64, 1);
+  transition-delay: calc(var(--i) * 60ms);
+  margin-left: -3px;
+}
+
+/* Paneles alternan dirección de pliegue (zigzag) */
+.biombo-panel:nth-child(odd)  { --zig: 1; }
+.biombo-panel:nth-child(even) { --zig: -1; }
+
+.biombo-screen--right .biombo-panel { transform-origin: right center; }
+
+.biombo-hero:hover .biombo-panel {
+  transform: rotateY(calc(var(--zig) * 12deg));
+  animation: biombo-sway 1.6s ease-in-out infinite alternate;
+  animation-delay: calc(0.6s + var(--i) * 120ms);
+}
+
+@keyframes biombo-sway {
+  from { transform: rotateY(calc(var(--zig) * 12deg)); }
+  to   { transform: rotateY(calc(var(--zig) * 28deg)); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .biombo-panel { transition: none; }
+  .biombo-hero:hover .biombo-panel { animation: none; }
+}
+
+/* Galería "Making of" */
+.making-of-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .making-of-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); grid-auto-flow: dense; }
+  /* Algunas fotos más grandes para dar ritmo */
+  .making-of-item:nth-child(1),
+  .making-of-item:nth-child(6) { grid-column: 3 / span 2; grid-row: span 2; }
+}
+
+.making-of-item {
+  position: relative;
+  margin: 0;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border: 3px solid #000;
+  border-radius: 1rem;
+  background: rgba(255, 240, 189, 0.15);
+}
+
+.making-of-item img {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.making-of-item:hover img { transform: scale(1.06); }
+
+.making-of-placeholder {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  color: rgba(255, 240, 189, 0.6);
+}
+
+
+/* =====================================================================
+   PROYECTOS — tarjeta activa mientras el panel está abierto
+   ===================================================================== */
+.project-card.is-active {
+  outline: 4px solid #F5D24B;
+  outline-offset: 4px;
+}
+
+
+/* =====================================================================
+   CONTACTO — redes sociales
+   ===================================================================== */
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.25rem;
+  height: 3.25rem;
+  border: 2px solid #000;
+  border-radius: 9999px;
+  background: #F5D24B;
+  color: #000;
+  transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+}
+
+.social-link:hover {
+  background: #000;
+  color: #F5D24B;
+  transform: translateY(-3px);
+}
+
+
+/* =====================================================================
+   TIENDA / APÓYANOS — cinta de precaución
+   Cuando llegue el PNG: reemplazar el background de .caution-tape por
+   background: url('../assets/caution-tape.png') repeat-x center / auto 100%;
+   y borrar el <span> de texto en el HTML si el PNG ya trae letras.
+   ===================================================================== */
+.caution-tape {
+  position: absolute;
+  left: -10%;
+  width: 120%;
+  height: 3.25rem;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  white-space: nowrap;
+  border-top: 3px solid #000;
+  border-bottom: 3px solid #000;
+  background: repeating-linear-gradient(-45deg, #F5D24B 0 28px, #000 28px 56px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  pointer-events: none;
+}
+
+.caution-tape span {
+  display: inline-block;
+  padding: 0.15rem 1rem;
+  margin-left: 2rem;
+  background: #F5D24B;
+  font-weight: 900;
+  letter-spacing: 0.2em;
+  font-size: 0.95rem;
+  animation: tape-scroll 30s linear infinite;
+}
+
+.caution-tape--a { top: 22%; transform: rotate(-8deg); }
+.caution-tape--b { bottom: 20%; transform: rotate(6deg); }
+.caution-tape--b span { animation-direction: reverse; }
+
+@keyframes tape-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-30%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .caution-tape span { animation: none; }
+}

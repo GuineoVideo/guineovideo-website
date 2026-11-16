@@ -1,62 +1,84 @@
 <!DOCTYPE html>
-<html lang="es" class="bg-brand-cream text-brand-black">
+<html lang="es" class="text-brand-black">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Compañía de Producción | Inicio</title>
+  <title>Guineo Video | Casa Productora</title>
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="js/tailwind-config.js"></script>
   <link rel="stylesheet" href="css/styles.css">
 </head>
-<body class="min-h-screen flex flex-col justify-between items-center text-center px-6 py-12 relative bg-brand-cream">
+<body class="min-h-screen flex flex-col relative">
 
-  <!-- Header con LOGO MÁS GRANDE en contenedor amarillo (#F5D24B) -->
-  <header class="w-full max-w-6xl flex flex-col items-center">
-    <div class="bg-brand-yellow p-6 md:p-8 rounded-3xl shadow-xl border-2 border-brand-black/10 mb-6 inline-block transform hover:scale-105 transition duration-300">
-      <img src="assets/GUINEOLOGO.png" alt="Guineo Logo" class="h-32 md:h-44 w-auto object-contain">
+  <!-- NAVBAR (misma en todas las páginas) -->
+  <nav class="site-nav bg-brand-yellow/95 border-b-2 border-brand-black sticky top-0 z-50 backdrop-blur-md">
+    <div class="max-w-7xl mx-auto px-6 py-2 flex items-center justify-between gap-6">
+      <a href="index.html" class="flex items-center gap-3 group shrink-0">
+        <!-- Logo sin encuadre. Para cambiar el logo, reemplazar assets/logo.png -->
+        <img src="assets/logo.png" alt="Guineo Video" class="h-12 md:h-16 w-auto object-contain transition group-hover:-rotate-6">
+        <span class="font-black tracking-tight text-brand-black text-2xl lg:text-3xl uppercase">Guineo Video</span>
+      </a>
+
+      <div class="hidden lg:flex items-center gap-7 text-sm font-extrabold tracking-wider uppercase text-brand-black">
+        <a href="html/biombo.html" class="px-4 py-2 rounded-lg border-2 border-brand-black transition hover:bg-brand-black hover:text-brand-yellow">Biombo</a>
+        <a href="html/proyectos.html" class="py-2 border-b-2 transition border-transparent hover:border-brand-black/60">Proyectos</a>
+        <a href="html/nosotrxs.html" class="py-2 border-b-2 transition border-transparent hover:border-brand-black/60">Sobre Nosotrxs</a>
+        <a href="html/tienda.html" class="py-2 border-b-2 transition border-transparent hover:border-brand-black/60">Tienda</a>
+        <a href="html/apoyanos.html" class="py-2 border-b-2 transition border-transparent hover:border-brand-black/60">¡Apóyanos!</a>
+        <a href="html/contacto.html" class="py-2 border-b-2 transition border-transparent hover:border-brand-black/60">Contacto</a>
+      </div>
+
+      <button id="mobile-menu-btn" class="lg:hidden text-brand-black focus:outline-none" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu">
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+      </button>
     </div>
-    <h1 class="text-xs md:text-sm tracking-[0.4em] uppercase text-brand-black/80 font-bold">
-      Casa Productora
-    </h1>
-  </header>
 
-  <!-- Hero Principal -->
-  <main class="max-w-4xl my-auto py-10">
-	<span class="bg-brand-yellow border border-brand-black/20 text-brand-black font-extrabold tracking-widest uppercase text-xs px-4 py-1.5 rounded-full inline-block mb-4 shadow-sm">
+    <div id="mobile-menu" class="hidden lg:hidden bg-brand-yellow border-t border-brand-black/20 px-6 py-4 flex flex-col space-y-3 font-bold uppercase tracking-wide text-brand-black">
+      <a href="html/biombo.html" class="hover:underline underline-offset-4">Biombo</a>
+      <a href="html/proyectos.html" class="hover:underline underline-offset-4">Proyectos</a>
+      <a href="html/nosotrxs.html" class="hover:underline underline-offset-4">Sobre Nosotrxs</a>
+      <a href="html/tienda.html" class="hover:underline underline-offset-4">Tienda</a>
+      <a href="html/apoyanos.html" class="hover:underline underline-offset-4">¡Apóyanos!</a>
+      <a href="html/contacto.html" class="hover:underline underline-offset-4">Contacto</a>
+    </div>
+  </nav>
+
+  <!-- DEMO REEL DE FONDO
+       Temporal: colocar el video en assets/video/demo-reel.mp4 (H.264, sin audio, idealmente < 10 MB).
+       Si el archivo no existe, se queda el fondo celeste. -->
+  <div class="fixed inset-0 -z-10 overflow-hidden bg-brand-sky" aria-hidden="true">
+    <video id="demo-reel" class="w-full h-full object-cover" autoplay muted loop playsinline preload="auto">
+      <source src="assets/video/demo-reel.mp4" type="video/mp4">
+    </video>
+    <div class="absolute inset-0 bg-brand-cream/55"></div>
+  </div>
+
+  <main class="flex-1 flex flex-col items-center justify-center text-center px-6 pt-6 pb-16">
+    <!-- Logo grande, sin encuadre -->
+    <img src="assets/logo.png" alt="Guineo Video" class="w-64 md:w-96 h-auto object-contain drop-shadow-xl mb-2 transition duration-300 hover:scale-105">
+    <p class="text-xs md:text-sm tracking-[0.4em] uppercase text-brand-black/80 font-bold mb-12">
+      Casa Productora
+    </p>
+
+    <span class="bg-brand-yellow border-2 border-brand-black text-brand-black font-extrabold tracking-widest uppercase text-xs px-4 py-1.5 rounded-full inline-block mb-4 shadow-sm">
       Proyecto Destacado
-    </span> 
-	<h2 class="text-6xl md:text-8xl font-black tracking-tight mb-6 text-brand-black">
-      BIOMBO
-    </h2>
+    </span>
+    <h1 class="text-6xl md:text-8xl font-black tracking-tight mb-6 text-brand-black">BIOMBO</h1>
     <p class="text-brand-black/80 text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed font-medium">
-    
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean et nisi ipsum. Nulla non bibendum mi. Sed ultricies pulvinar purus.
-</p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean et nisi ipsum. Nulla non bibendum mi. Sed ultricies pulvinar purus.
+    </p>
 
     <div class="flex flex-col sm:flex-row justify-center gap-4">
-      <a href="html/biombo.html" class="bg-brand-yellow hover:bg-brand-gold text-brand-black border-2 border-brand-black/20 font-extrabold px-8 py-4 rounded-xl transition shadow-md hover:shadow-lg">
+      <a href="html/biombo.html" class="bg-brand-yellow hover:bg-brand-gold text-brand-black border-2 border-brand-black font-extrabold px-8 py-4 rounded-xl transition shadow-md hover:shadow-lg">
         Ver Proyecto Biombo
       </a>
-      <a href="html/portafolio.html" class="bg-white hover:bg-brand-black hover:text-brand-cream border-2 border-brand-black text-brand-black font-bold px-8 py-4 rounded-xl transition shadow-sm">
-        Explorar Portafolio
+      <a href="html/proyectos.html" class="bg-white hover:bg-brand-black hover:text-brand-cream border-2 border-brand-black text-brand-black font-bold px-8 py-4 rounded-xl transition shadow-sm">
+        Explorar Proyectos
       </a>
     </div>
   </main>
 
-  <!-- Footer con menú de navegación -->
-  <footer class="w-full max-w-4xl">
-    <div class="grid grid-cols-2 sm:grid-cols-6 gap-4 pt-8 border-t border-brand-black/20 text-xs tracking-wider text-brand-black/80 uppercase font-bold">
-      <a href="html/biombo.html" class="hover:text-brand-gold transition py-1 text-brand-black font-extrabold">Biombo</a>
-      <a href="html/portafolio.html" class="hover:text-brand-gold transition py-1">Portafolio</a>
-      <a href="html/equipo.html" class="hover:text-brand-gold transition py-1">Equipo</a>
-      <a href="html/tienda.html" class="hover:text-brand-gold transition py-1">Tienda</a>
-      <a href="html/aportacion.html" class="hover:text-brand-gold transition py-1">Aportación</a>
-      <a href="html/contacto.html" class="hover:text-brand-gold transition py-1">Contacto</a>
-    </div>
-  </footer>
-
   <script src="js/main.js"></script>
 </body>
 </html>
-

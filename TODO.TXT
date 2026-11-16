@@ -1,32 +1,39 @@
+Leyenda: [x] hecho   [~] estructura lista, falta material   [ ] pendiente
+
+General:
+  [x] Navbar igual en todas las páginas (BIOMBO / PROYECTOS / SOBRE NOSOTRXS / TIENDA / ¡APÓYANOS! / CONTACTO)
+  [~] Cambiar logo de guineo video a imagen que me dio josue
+      -> Todas las páginas usan assets/logo.png. Reemplazar ese archivo con el logo nuevo.
+
 Home:
-  - Subir logo, quitar encuadre.
-  - Subir navbar 3/3
-  - Demo reel en el background (Temporarily video que me manden)
+  [x] Subir logo, quitar encuadre.
+  [x] Subir navbar (ahora arriba, ya no en el footer)
+  [~] Demo reel en el background -> poner el video en assets/video/demo-reel.mp4
 
 Biombo:
-  - "Making of" gallery
-  - Background color changes to red
-  - Poner logo de biombo (reemplazar texto)
-  - When hover over biombo, animate biombos next to it
+  [~] "Making of" gallery -> fotos en assets/biombo/making-of/01.jpg ... 10.jpg (clic = lightbox)
+  [x] Background color changes to red (brand.red en js/tailwind-config.js)
+  [~] Poner logo de biombo (reemplazar texto) -> assets/biombo/biombo-logo.png (si no existe, sale el texto)
+  [x] When hover over biombo, animate biombos next to it
 
-Portafolio:
-  - Cambiar nombre a Proyectos
-  - Cambiar el grid a ser vertical
-  - Detail pop ups a la derecha (modal o hidden grid)
-  - When hovering over proyect, enlarge card slightly
+Proyectos (antes Portafolio, ahora html/proyectos.html):
+  [x] Cambiar nombre a Proyectos
+  [x] Cambiar el grid a ser vertical
+  [x] Detail pop ups a la derecha (panel lateral; datos en los data-* de cada tarjeta)
+  [x] When hovering over proyect, enlarge card slightly
 
-Equipo
-  - Cambiar nombre a Sobre Nosotrxs
-  - Incluir info preliminar de la compañia
-  - Cambiar card a spans y alternar posicion de fotos.
+Sobre Nosotrxs (antes Equipo, ahora html/nosotrxs.html):
+  [x] Cambiar nombre a Sobre Nosotrxs
+  [~] Incluir info preliminar de la compañia -> llenar el texto entre corchetes
+  [x] Cambiar card a spans y alternar posicion de fotos.
+  [ ] Confirmar nombres, roles y pronombres de cada integrante
 
-Contacto
-  - Terminar formspree para enviar emails a info@guineovideo.com
-  - Add socials
+Contacto:
+  [~] Terminar formspree -> crear form en formspree.io con info@guineovideo.com y
+      reemplazar TU_FORM_ID en html/contacto.html
+  [~] Add socials -> poner los URLs (Instagram, TikTok, YouTube, Facebook) en html/contacto.html
 
-
-Tienda/Aportacion:
-  - Cambia aportacion a Apoyanos!
-  - Migrar codigo de madurando a estas pagina (Me van a dar caution tape png)
-
-Cambiar logo de guineo video a imagen que me dio josue
+Tienda/Apóyanos:
+  [x] Cambia aportacion a Apoyanos! (html/apoyanos.html)
+  [~] Migrar codigo de madurando a estas paginas -> por ahora páginas "en construcción"
+      con cinta de precaución en CSS. Cuando llegue el PNG, ver .caution-tape en css/styles.css.

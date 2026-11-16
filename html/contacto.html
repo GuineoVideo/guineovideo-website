@@ -1,71 +1,102 @@
 <!DOCTYPE html>
-<html lang="es" class="bg-brand-cream text-brand-black">
+<html lang="es" class="text-brand-black">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contacto</title> 
+  <title>Contacto | Guineo Video</title>
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="../js/tailwind-config.js"></script>
   <link rel="stylesheet" href="../css/styles.css">
 </head>
-<body class="bg-brand-cream min-h-screen">
+<body class="bg-brand-sky min-h-screen">
 
-  <nav class="bg-brand-cream/90 border-b border-brand-black/15 sticky top-0 z-50 backdrop-blur-md">
-    <div class="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
-      <a href="../index.html" class="flex items-center gap-4 group">
-        <div class="bg-brand-yellow p-2 rounded-xl border border-brand-black/10 flex items-center justify-center transition group-hover:bg-brand-gold shadow-sm">
-          <img src="../assets/GUINEOLOGO.png" alt="Guineo Logo" class="h-12 md:h-16 w-auto object-contain">
-        </div>
-        <span class="font-black tracking-widest text-brand-black group-hover:text-brand-gold transition text-xl">GUINEO VIDEO</span>
+  <!-- NAVBAR (misma en todas las páginas) -->
+  <nav class="site-nav bg-brand-yellow/95 border-b-2 border-brand-black sticky top-0 z-50 backdrop-blur-md">
+    <div class="max-w-7xl mx-auto px-6 py-2 flex items-center justify-between gap-6">
+      <a href="../index.html" class="flex items-center gap-3 group shrink-0">
+        <!-- Logo sin encuadre. Para cambiar el logo, reemplazar assets/logo.png -->
+        <img src="../assets/logo.png" alt="Guineo Video" class="h-12 md:h-16 w-auto object-contain transition group-hover:-rotate-6">
+        <span class="font-black tracking-tight text-brand-black text-2xl lg:text-3xl uppercase">Guineo Video</span>
       </a>
 
-      <div class="hidden md:flex space-x-8 text-sm font-extrabold tracking-wide text-brand-black">
-        <a href="biombo.html" class="hover:text-brand-gold transition">Biombo</a>
-        <a href="portafolio.html" class="hover:text-brand-gold transition">Portafolio</a>
-        <a href="equipo.html" class="hover:text-brand-gold transition">Equipo</a>
-        <a href="tienda.html" class="hover:text-brand-gold transition">Tienda</a>
-        <a href="aportacion.html" class="hover:text-brand-gold transition">Aportación</a>
-        <a href="contacto.html" class="text-brand-gold border-b-2 border-brand-gold pb-1">Contacto</a>
+      <div class="hidden lg:flex items-center gap-7 text-sm font-extrabold tracking-wider uppercase text-brand-black">
+        <a href="biombo.html" class="px-4 py-2 rounded-lg border-2 border-brand-black transition hover:bg-brand-black hover:text-brand-yellow">Biombo</a>
+        <a href="proyectos.html" class="py-2 border-b-2 transition border-transparent hover:border-brand-black/60">Proyectos</a>
+        <a href="nosotrxs.html" class="py-2 border-b-2 transition border-transparent hover:border-brand-black/60">Sobre Nosotrxs</a>
+        <a href="tienda.html" class="py-2 border-b-2 transition border-transparent hover:border-brand-black/60">Tienda</a>
+        <a href="apoyanos.html" class="py-2 border-b-2 transition border-transparent hover:border-brand-black/60">¡Apóyanos!</a>
+        <a href="contacto.html" class="py-2 border-b-2 transition border-brand-black" aria-current="page">Contacto</a>
       </div>
 
-      <button id="mobile-menu-btn" class="md:hidden text-brand-black hover:text-brand-gold">
+      <button id="mobile-menu-btn" class="lg:hidden text-brand-black focus:outline-none" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu">
         <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
       </button>
     </div>
 
-    <div id="mobile-menu" class="hidden md:hidden bg-brand-cream border-b border-brand-black/15 px-6 py-4 flex flex-col space-y-3 font-bold text-brand-black">
-      <a href="biombo.html" class="hover:text-brand-gold">Biombo</a>
-      <a href="portafolio.html" class="hover:text-brand-gold">Portafolio</a>
-      <a href="equipo.html" class="hover:text-brand-gold">Equipo</a>
-      <a href="tienda.html" class="hover:text-brand-gold">Tienda</a>
-      <a href="aportacion.html" class="hover:text-brand-gold">Aportación</a>
-      <a href="contacto.html" class="text-brand-gold font-extrabold">Contacto</a>
+    <div id="mobile-menu" class="hidden lg:hidden bg-brand-yellow border-t border-brand-black/20 px-6 py-4 flex flex-col space-y-3 font-bold uppercase tracking-wide text-brand-black">
+      <a href="biombo.html" class="hover:underline underline-offset-4">Biombo</a>
+      <a href="proyectos.html" class="hover:underline underline-offset-4">Proyectos</a>
+      <a href="nosotrxs.html" class="hover:underline underline-offset-4">Sobre Nosotrxs</a>
+      <a href="tienda.html" class="hover:underline underline-offset-4">Tienda</a>
+      <a href="apoyanos.html" class="hover:underline underline-offset-4">¡Apóyanos!</a>
+      <a href="contacto.html" class="font-black underline underline-offset-4" aria-current="page">Contacto</a>
     </div>
   </nav>
 
   <main class="max-w-2xl mx-auto px-6 py-12">
     <h1 class="text-5xl font-black mb-8 text-brand-black text-center">Contacto</h1>
-    <form class="space-y-5 bg-white p-8 rounded-3xl border-2 border-brand-black/15 shadow-sm">
+
+    <!--
+      FORMSPREE: crear el formulario en formspree.io con el correo info@guineovideo.com
+      (el destino se configura en el dashboard de Formspree, no aquí) y reemplazar
+      TU_FORM_ID en el action por el ID que te dan (ej. https://formspree.io/f/abcdwxyz).
+    -->
+    <form id="contact-form" action="https://formspree.io/f/TU_FORM_ID" method="POST" class="space-y-5 bg-white p-8 rounded-3xl border-2 border-brand-black shadow-md">
+      <input type="hidden" name="_subject" value="Nuevo mensaje desde guineovideo.com">
+      <!-- Honeypot anti-spam: no borrar -->
+      <input type="text" name="_gotcha" class="hidden" tabindex="-1" autocomplete="off">
       <div>
-        <label class="block text-sm font-bold mb-2 text-brand-black">Nombre</label>
-        <input type="text" class="w-full bg-brand-cream/30 border border-brand-black/20 rounded-xl px-4 py-3 text-brand-black focus:outline-none focus:ring-2 focus:ring-brand-yellow font-medium">
+        <label for="nombre" class="block text-sm font-bold mb-2 text-brand-black">Nombre</label>
+        <input id="nombre" name="nombre" type="text" required autocomplete="name" class="w-full bg-brand-cream/30 border border-brand-black/30 rounded-xl px-4 py-3 text-brand-black focus:outline-none focus:ring-2 focus:ring-brand-yellow font-medium">
       </div>
       <div>
-        <label class="block text-sm font-bold mb-2 text-brand-black">Correo Electrónico</label>
-        <input type="email" class="w-full bg-brand-cream/30 border border-brand-black/20 rounded-xl px-4 py-3 text-brand-black focus:outline-none focus:ring-2 focus:ring-brand-yellow font-medium">
+        <label for="email" class="block text-sm font-bold mb-2 text-brand-black">Correo Electrónico</label>
+        <input id="email" name="email" type="email" required autocomplete="email" class="w-full bg-brand-cream/30 border border-brand-black/30 rounded-xl px-4 py-3 text-brand-black focus:outline-none focus:ring-2 focus:ring-brand-yellow font-medium">
       </div>
       <div>
-        <label class="block text-sm font-bold mb-2 text-brand-black">Mensaje</label>
-        <textarea rows="4" class="w-full bg-brand-cream/30 border border-brand-black/20 rounded-xl px-4 py-3 text-brand-black focus:outline-none focus:ring-2 focus:ring-brand-yellow font-medium"></textarea>
+        <label for="mensaje" class="block text-sm font-bold mb-2 text-brand-black">Mensaje</label>
+        <textarea id="mensaje" name="mensaje" rows="5" required class="w-full bg-brand-cream/30 border border-brand-black/30 rounded-xl px-4 py-3 text-brand-black focus:outline-none focus:ring-2 focus:ring-brand-yellow font-medium"></textarea>
       </div>
-      <button type="submit" class="w-full bg-brand-yellow hover:bg-brand-gold text-brand-black border border-brand-black/20 font-extrabold py-4 rounded-xl transition shadow-md">
+      <button type="submit" class="w-full bg-brand-yellow hover:bg-brand-gold disabled:opacity-60 text-brand-black border-2 border-brand-black font-extrabold py-4 rounded-xl transition shadow-md">
         Enviar Mensaje
       </button>
+      <p id="form-status" class="hidden text-center font-bold rounded-xl px-4 py-3" role="status" aria-live="polite"></p>
     </form>
+
+    <!-- REDES SOCIALES -->
+    <section class="mt-12 text-center">
+      <h2 class="text-2xl font-black mb-2">Síguenos</h2>
+      <p class="font-medium text-brand-black/80 mb-6">
+        O escríbenos directo a <a href="mailto:info@guineovideo.com" class="font-extrabold underline underline-offset-4">info@guineovideo.com</a>
+      </p>
+      <div class="flex justify-center gap-4">
+        <a href="#" target="_blank" rel="noopener" class="social-link" aria-label="Instagram" title="Instagram"><!-- TODO: URL de Instagram -->
+          <svg viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6"><path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2Zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5a4.25 4.25 0 0 0 4.25-4.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 1.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7Zm5.25-2.75a1 1 0 1 1 0 2 1 1 0 0 1 0-2Z"/></svg>
+        </a>
+        <a href="#" target="_blank" rel="noopener" class="social-link" aria-label="TikTok" title="TikTok"><!-- TODO: URL de TikTok -->
+          <svg viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6"><path d="M16.6 2h-3.1v13.2a2.9 2.9 0 1 1-2.9-2.9c.3 0 .6 0 .9.1V9.2a6.1 6.1 0 1 0 5.1 6V8.6a7.6 7.6 0 0 0 4.4 1.4V6.9A4.5 4.5 0 0 1 16.6 2Z"/></svg>
+        </a>
+        <a href="#" target="_blank" rel="noopener" class="social-link" aria-label="YouTube" title="YouTube"><!-- TODO: URL de YouTube -->
+          <svg viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12a31 31 0 0 0 .5 4.8 3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8ZM9.75 15.5v-7l6 3.5-6 3.5Z"/></svg>
+        </a>
+        <a href="#" target="_blank" rel="noopener" class="social-link" aria-label="Facebook" title="Facebook"><!-- TODO: URL de Facebook -->
+          <svg viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6"><path d="M13.5 22v-8h2.7l.4-3.2h-3.1V8.8c0-.9.3-1.6 1.6-1.6h1.7V4.4c-.3 0-1.3-.1-2.5-.1-2.5 0-4.1 1.5-4.1 4.2v2.3H7.4V14h2.8v8h3.3Z"/></svg>
+        </a>
+      </div>
+    </section>
   </main>
 
   <script src="../js/main.js"></script>
 </body>
 </html>
-

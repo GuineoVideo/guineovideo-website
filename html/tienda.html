@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es" class="text-brand-black">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tienda | Guineo Video</title>
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="../js/tailwind-config.js"></script>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body class="bg-brand-sky min-h-screen">
+
+  <!-- NAVBAR (misma en todas las páginas) -->
+  <nav class="site-nav bg-brand-yellow/95 border-b-2 border-brand-black sticky top-0 z-50 backdrop-blur-md">
+    <div class="max-w-7xl mx-auto px-6 py-2 flex items-center justify-between gap-6">
+      <a href="../index.html" class="flex items-center gap-3 group shrink-0">
+        <!-- Logo sin encuadre. Para cambiar el logo, reemplazar assets/logo.png -->
+        <img src="../assets/logo.png" alt="Guineo Video" class="h-12 md:h-16 w-auto object-contain transition group-hover:-rotate-6">
+        <span class="font-black tracking-tight text-brand-black text-2xl lg:text-3xl uppercase">Guineo Video</span>
+      </a>
+
+      <div class="hidden lg:flex items-center gap-7 text-sm font-extrabold tracking-wider uppercase text-brand-black">
+        <a href="biombo.html" class="px-4 py-2 rounded-lg border-2 border-brand-black transition hover:bg-brand-black hover:text-brand-yellow">Biombo</a>
+        <a href="proyectos.html" class="py-2 border-b-2 transition border-transparent hover:border-brand-black/60">Proyectos</a>
+        <a href="nosotrxs.html" class="py-2 border-b-2 transition border-transparent hover:border-brand-black/60">Sobre Nosotrxs</a>
+        <a href="tienda.html" class="py-2 border-b-2 transition border-brand-black" aria-current="page">Tienda</a>
+        <a href="apoyanos.html" class="py-2 border-b-2 transition border-transparent hover:border-brand-black/60">¡Apóyanos!</a>
+        <a href="contacto.html" class="py-2 border-b-2 transition border-transparent hover:border-brand-black/60">Contacto</a>
+      </div>
+
+      <button id="mobile-menu-btn" class="lg:hidden text-brand-black focus:outline-none" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu">
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+      </button>
+    </div>
+
+    <div id="mobile-menu" class="hidden lg:hidden bg-brand-yellow border-t border-brand-black/20 px-6 py-4 flex flex-col space-y-3 font-bold uppercase tracking-wide text-brand-black">
+      <a href="biombo.html" class="hover:underline underline-offset-4">Biombo</a>
+      <a href="proyectos.html" class="hover:underline underline-offset-4">Proyectos</a>
+      <a href="nosotrxs.html" class="hover:underline underline-offset-4">Sobre Nosotrxs</a>
+      <a href="tienda.html" class="font-black underline underline-offset-4" aria-current="page">Tienda</a>
+      <a href="apoyanos.html" class="hover:underline underline-offset-4">¡Apóyanos!</a>
+      <a href="contacto.html" class="hover:underline underline-offset-4">Contacto</a>
+    </div>
+  </nav>
+
+  <!--
+    Página temporal "en construcción".
+    TODO: migrar aquí el código de Madurando.
+    La cinta de precaución es CSS (.caution-tape en css/styles.css); cuando llegue
+    el PNG, cambiar el background de .caution-tape por url('../assets/caution-tape.png').
+  -->
+  <main class="relative overflow-hidden min-h-[calc(100vh-5rem)] flex items-center justify-center px-6 py-24">
+    <div class="caution-tape caution-tape--a" aria-hidden="true"><span>EN CONSTRUCCIÓN · EN CONSTRUCCIÓN · EN CONSTRUCCIÓN · EN CONSTRUCCIÓN · EN CONSTRUCCIÓN · EN CONSTRUCCIÓN</span></div>
+    <div class="caution-tape caution-tape--b" aria-hidden="true"><span>MADURANDO · MADURANDO · MADURANDO · MADURANDO · MADURANDO · MADURANDO · MADURANDO · MADURANDO</span></div>
+
+    <div class="relative z-10 bg-brand-cream border-2 border-brand-black rounded-3xl shadow-2xl p-10 max-w-xl text-center">
+      <h1 class="text-5xl md:text-6xl font-black mb-4">Tienda</h1>
+      <p class="text-brand-black/80 font-medium text-lg mb-6">Nuestro merch todavía está madurando. ¡Vuelve pronto!</p>
+      
+    </div>
+  </main>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

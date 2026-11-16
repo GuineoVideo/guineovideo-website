@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es" class="text-brand-black">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sobre Nosotrxs | Guineo Video</title>
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="../js/tailwind-config.js"></script>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body class="bg-brand-sky min-h-screen">
+
+  <!-- NAVBAR (misma en todas las páginas) -->
+  <nav class="site-nav bg-brand-yellow/95 border-b-2 border-brand-black sticky top-0 z-50 backdrop-blur-md">
+    <div class="max-w-7xl mx-auto px-6 py-2 flex items-center justify-between gap-6">
+      <a href="../index.html" class="flex items-center gap-3 group shrink-0">
+        <!-- Logo sin encuadre. Para cambiar el logo, reemplazar assets/logo.png -->
+        <img src="../assets/logo.png" alt="Guineo Video" class="h-12 md:h-16 w-auto object-contain transition group-hover:-rotate-6">
+        <span class="font-black tracking-tight text-brand-black text-2xl lg:text-3xl uppercase">Guineo Video</span>
+      </a>
+
+      <div class="hidden lg:flex items-center gap-7 text-sm font-extrabold tracking-wider uppercase text-brand-black">
+        <a href="biombo.html" class="px-4 py-2 rounded-lg border-2 border-brand-black transition hover:bg-brand-black hover:text-brand-yellow">Biombo</a>
+        <a href="proyectos.html" class="py-2 border-b-2 transition border-transparent hover:border-brand-black/60">Proyectos</a>
+        <a href="nosotrxs.html" class="py-2 border-b-2 transition border-brand-black" aria-current="page">Sobre Nosotrxs</a>
+        <a href="tienda.html" class="py-2 border-b-2 transition border-transparent hover:border-brand-black/60">Tienda</a>
+        <a href="apoyanos.html" class="py-2 border-b-2 transition border-transparent hover:border-brand-black/60">¡Apóyanos!</a>
+        <a href="contacto.html" class="py-2 border-b-2 transition border-transparent hover:border-brand-black/60">Contacto</a>
+      </div>
+
+      <button id="mobile-menu-btn" class="lg:hidden text-brand-black focus:outline-none" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu">
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+      </button>
+    </div>
+
+    <div id="mobile-menu" class="hidden lg:hidden bg-brand-yellow border-t border-brand-black/20 px-6 py-4 flex flex-col space-y-3 font-bold uppercase tracking-wide text-brand-black">
+      <a href="biombo.html" class="hover:underline underline-offset-4">Biombo</a>
+      <a href="proyectos.html" class="hover:underline underline-offset-4">Proyectos</a>
+      <a href="nosotrxs.html" class="font-black underline underline-offset-4" aria-current="page">Sobre Nosotrxs</a>
+      <a href="tienda.html" class="hover:underline underline-offset-4">Tienda</a>
+      <a href="apoyanos.html" class="hover:underline underline-offset-4">¡Apóyanos!</a>
+      <a href="contacto.html" class="hover:underline underline-offset-4">Contacto</a>
+    </div>
+  </nav>
+
+  <main class="max-w-5xl mx-auto px-6 py-12">
+    <h1 class="text-5xl md:text-6xl font-black mb-10 text-brand-black">Sobre Nosotrxs</h1>
+
+    <!-- INFO PRELIMINAR DE LA COMPAÑÍA (reemplazar el texto entre corchetes) -->
+    <section class="grid md:grid-cols-3 gap-6 mb-20">
+      <div class="md:col-span-3 bg-brand-cream border-2 border-brand-black rounded-3xl p-8 shadow-md">
+        <h2 class="text-2xl font-black mb-3">¿Quiénes somos?</h2>
+        <p class="text-brand-black/80 font-medium leading-relaxed">
+          Guineo Video es una casa productora [ciudad / año de fundación]. [Descripción breve de la compañía: origen, quiénes la forman y qué la hace distinta.]
+        </p>
+      </div>
+      <div class="bg-white border-2 border-brand-black rounded-3xl p-6 shadow-sm">
+        <h3 class="text-xl font-black mb-2">Qué hacemos</h3>
+        <p class="text-brand-black/80 font-medium text-sm leading-relaxed">[Cortometrajes, videos musicales, animación, contenido comercial…]</p>
+      </div>
+      <div class="bg-white border-2 border-brand-black rounded-3xl p-6 shadow-sm">
+        <h3 class="text-xl font-black mb-2">Misión</h3>
+        <p class="text-brand-black/80 font-medium text-sm leading-relaxed">[Misión de la compañía.]</p>
+      </div>
+      <div class="bg-white border-2 border-brand-black rounded-3xl p-6 shadow-sm">
+        <h3 class="text-xl font-black mb-2">Visión</h3>
+        <p class="text-brand-black/80 font-medium text-sm leading-relaxed">[Visión de la compañía.]</p>
+      </div>
+    </section>
+
+    <h2 class="text-4xl font-black mb-12 text-brand-black">El Equipo</h2>
+    <!-- Integrantes: las fotos alternan izquierda / derecha automáticamente -->
+    <div class="flex flex-col gap-16">
+      <!-- 1. Josué -->
+      <article class="member flex flex-col md:flex-row items-center gap-8 md:gap-12">
+        <div class="w-48 h-48 md:w-60 md:h-60 shrink-0 rounded-full border-4 border-brand-black overflow-hidden shadow-lg bg-brand-yellow/30">
+          <img src="../assets/josue.jpeg" alt="Foto de Josué" class="w-full h-full object-cover" loading="lazy">
+        </div>
+        <div class="text-center md:text-left">
+          <h3 class="text-3xl md:text-4xl font-black text-brand-black">Josué</h3>
+          <span class="block text-brand-black/70 font-extrabold uppercase tracking-wider text-sm mt-1">Co-Presidente <span class="font-semibold normal-case">(pronombres)</span></span>
+          <span class="block text-brand-black/80 font-medium mt-3 max-w-xl">Dirección Creativa, Escritura, Edición, Animación, Ilustración</span>
+        </div>
+      </article>
+      <!-- 2. Baruc Tort -->
+      <article class="member flex flex-col md:flex-row-reverse items-center gap-8 md:gap-12">
+        <div class="w-48 h-48 md:w-60 md:h-60 shrink-0 rounded-full border-4 border-brand-black overflow-hidden shadow-lg bg-brand-yellow/30">
+          <img src="../assets/baruc.jpeg" alt="Foto de Baruc Tort" class="w-full h-full object-cover" loading="lazy">
+        </div>
+        <div class="text-center md:text-right">
+          <h3 class="text-3xl md:text-4xl font-black text-brand-black">Baruc Tort</h3>
+          <span class="block text-brand-black/70 font-extrabold uppercase tracking-wider text-sm mt-1">Co-Presidente <span class="font-semibold normal-case">(pronombres)</span></span>
+          <span class="block text-brand-black/80 font-medium mt-3 max-w-xl">Dirección Creativa, Escritura, Edición, Animación, Ilustración</span>
+        </div>
+      </article>
+      <!-- 3. Alex -->
+      <article class="member flex flex-col md:flex-row items-center gap-8 md:gap-12">
+        <div class="w-48 h-48 md:w-60 md:h-60 shrink-0 rounded-full border-4 border-brand-black overflow-hidden shadow-lg bg-brand-yellow/30">
+          <img src="../assets/alex.jpeg" alt="Foto de Alex" class="w-full h-full object-cover" loading="lazy">
+        </div>
+        <div class="text-center md:text-left">
+          <h3 class="text-3xl md:text-4xl font-black text-brand-black">Alex</h3>
+          <span class="block text-brand-black/70 font-extrabold uppercase tracking-wider text-sm mt-1">Rol <span class="font-semibold normal-case">(pronombres)</span></span>
+          <span class="block text-brand-black/80 font-medium mt-3 max-w-xl">Áreas de trabajo</span>
+        </div>
+      </article>
+      <!-- 4. Derick -->
+      <article class="member flex flex-col md:flex-row-reverse items-center gap-8 md:gap-12">
+        <div class="w-48 h-48 md:w-60 md:h-60 shrink-0 rounded-full border-4 border-brand-black overflow-hidden shadow-lg bg-brand-yellow/30">
+          <img src="../assets/derick.jpeg" alt="Foto de Derick" class="w-full h-full object-cover" loading="lazy">
+        </div>
+        <div class="text-center md:text-right">
+          <h3 class="text-3xl md:text-4xl font-black text-brand-black">Derick</h3>
+          <span class="block text-brand-black/70 font-extrabold uppercase tracking-wider text-sm mt-1">Rol <span class="font-semibold normal-case">(pronombres)</span></span>
+          <span class="block text-brand-black/80 font-medium mt-3 max-w-xl">Áreas de trabajo</span>
+        </div>
+      </article>
+      <!-- 5. Eugene -->
+      <article class="member flex flex-col md:flex-row items-center gap-8 md:gap-12">
+        <div class="w-48 h-48 md:w-60 md:h-60 shrink-0 rounded-full border-4 border-brand-black overflow-hidden shadow-lg bg-brand-yellow/30">
+          <img src="../assets/eugene.jpeg" alt="Foto de Eugene" class="w-full h-full object-cover" loading="lazy">
+        </div>
+        <div class="text-center md:text-left">
+          <h3 class="text-3xl md:text-4xl font-black text-brand-black">Eugene</h3>
+          <span class="block text-brand-black/70 font-extrabold uppercase tracking-wider text-sm mt-1">Rol <span class="font-semibold normal-case">(pronombres)</span></span>
+          <span class="block text-brand-black/80 font-medium mt-3 max-w-xl">Áreas de trabajo</span>
+        </div>
+      </article>
+      <!-- 6. Ivanna -->
+      <article class="member flex flex-col md:flex-row-reverse items-center gap-8 md:gap-12">
+        <div class="w-48 h-48 md:w-60 md:h-60 shrink-0 rounded-full border-4 border-brand-black overflow-hidden shadow-lg bg-brand-yellow/30">
+          <img src="../assets/ivanna.jpeg" alt="Foto de Ivanna" class="w-full h-full object-cover" loading="lazy">
+        </div>
+        <div class="text-center md:text-right">
+          <h3 class="text-3xl md:text-4xl font-black text-brand-black">Ivanna</h3>
+          <span class="block text-brand-black/70 font-extrabold uppercase tracking-wider text-sm mt-1">Rol <span class="font-semibold normal-case">(pronombres)</span></span>
+          <span class="block text-brand-black/80 font-medium mt-3 max-w-xl">Áreas de trabajo</span>
+        </div>
+      </article>
+      <!-- 7. Mia -->
+      <article class="member flex flex-col md:flex-row items-center gap-8 md:gap-12">
+        <div class="w-48 h-48 md:w-60 md:h-60 shrink-0 rounded-full border-4 border-brand-black overflow-hidden shadow-lg bg-brand-yellow/30">
+          <img src="../assets/mia.jpeg" alt="Foto de Mia" class="w-full h-full object-cover" loading="lazy">
+        </div>
+        <div class="text-center md:text-left">
+          <h3 class="text-3xl md:text-4xl font-black text-brand-black">Mia</h3>
+          <span class="block text-brand-black/70 font-extrabold uppercase tracking-wider text-sm mt-1">Rol <span class="font-semibold normal-case">(pronombres)</span></span>
+          <span class="block text-brand-black/80 font-medium mt-3 max-w-xl">Áreas de trabajo</span>
+        </div>
+      </article>
+    </div>
+  </main>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

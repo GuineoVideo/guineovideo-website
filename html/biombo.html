@@ -1,83 +1,161 @@
 <!DOCTYPE html>
-<html lang="es" class="bg-brand-cream text-brand-black">
+<html lang="es" class="text-brand-black">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Biombo | Proyecto Principal</title> 
+  <title>Biombo | Guineo Video</title>
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="../js/tailwind-config.js"></script>
   <link rel="stylesheet" href="../css/styles.css">
 </head>
-<body class="bg-brand-cream min-h-screen">
+<body class="bg-brand-red min-h-screen">
 
-  <!-- NAVBAR CON LOGO AMPLIADO -->
-  <nav class="bg-brand-cream/90 border-b border-brand-black/15 sticky top-0 z-50 backdrop-blur-md">
-    <div class="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
-      
-      <a href="../index.html" class="flex items-center gap-4 group">
-        <div class="bg-brand-yellow p-2 rounded-xl border border-brand-black/10 flex items-center justify-center transition group-hover:bg-brand-gold shadow-sm">
-          <img src="../assets/GUINEOLOGO.png" alt="Guineo Logo" class="h-12 md:h-16 w-auto object-contain">
-        </div>
-        <span class="font-black tracking-widest text-brand-black group-hover:text-brand-gold transition text-xl">
-          GUINEO VIDEO
-        </span>
+  <!-- NAVBAR (misma en todas las páginas) -->
+  <nav class="site-nav bg-brand-yellow/95 border-b-2 border-brand-black sticky top-0 z-50 backdrop-blur-md">
+    <div class="max-w-7xl mx-auto px-6 py-2 flex items-center justify-between gap-6">
+      <a href="../index.html" class="flex items-center gap-3 group shrink-0">
+        <!-- Logo sin encuadre. Para cambiar el logo, reemplazar assets/logo.png -->
+        <img src="../assets/logo.png" alt="Guineo Video" class="h-12 md:h-16 w-auto object-contain transition group-hover:-rotate-6">
+        <span class="font-black tracking-tight text-brand-black text-2xl lg:text-3xl uppercase">Guineo Video</span>
       </a>
 
-      <div class="hidden md:flex space-x-8 text-sm font-extrabold tracking-wide text-brand-black">
-        <a href="biombo.html" class="text-brand-gold border-b-2 border-brand-gold pb-1">Biombo</a>
-        <a href="portafolio.html" class="hover:text-brand-gold transition">Portafolio</a>
-        <a href="equipo.html" class="hover:text-brand-gold transition">Equipo</a>
-        <a href="tienda.html" class="hover:text-brand-gold transition">Tienda</a>
-        <a href="aportacion.html" class="hover:text-brand-gold transition">Aportación</a>
-        <a href="contacto.html" class="hover:text-brand-gold transition">Contacto</a>
+      <div class="hidden lg:flex items-center gap-7 text-sm font-extrabold tracking-wider uppercase text-brand-black">
+        <a href="biombo.html" class="px-4 py-2 rounded-lg border-2 border-brand-black transition hover:bg-brand-black hover:text-brand-yellow bg-brand-black text-brand-yellow" aria-current="page">Biombo</a>
+        <a href="proyectos.html" class="py-2 border-b-2 transition border-transparent hover:border-brand-black/60">Proyectos</a>
+        <a href="nosotrxs.html" class="py-2 border-b-2 transition border-transparent hover:border-brand-black/60">Sobre Nosotrxs</a>
+        <a href="tienda.html" class="py-2 border-b-2 transition border-transparent hover:border-brand-black/60">Tienda</a>
+        <a href="apoyanos.html" class="py-2 border-b-2 transition border-transparent hover:border-brand-black/60">¡Apóyanos!</a>
+        <a href="contacto.html" class="py-2 border-b-2 transition border-transparent hover:border-brand-black/60">Contacto</a>
       </div>
 
-      <button id="mobile-menu-btn" class="md:hidden text-brand-black hover:text-brand-gold focus:outline-none">
-        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-        </svg>
+      <button id="mobile-menu-btn" class="lg:hidden text-brand-black focus:outline-none" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu">
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
       </button>
     </div>
 
-    <div id="mobile-menu" class="hidden md:hidden bg-brand-cream border-b border-brand-black/15 px-6 py-4 flex flex-col space-y-3 font-bold text-brand-black">
-      <a href="biombo.html" class="text-brand-gold font-extrabold">Biombo</a>
-      <a href="portafolio.html" class="hover:text-brand-gold">Portafolio</a>
-      <a href="equipo.html" class="hover:text-brand-gold">Equipo</a>
-      <a href="tienda.html" class="hover:text-brand-gold">Tienda</a>
-      <a href="aportacion.html" class="hover:text-brand-gold">Aportación</a>
-      <a href="contacto.html" class="hover:text-brand-gold">Contacto</a>
+    <div id="mobile-menu" class="hidden lg:hidden bg-brand-yellow border-t border-brand-black/20 px-6 py-4 flex flex-col space-y-3 font-bold uppercase tracking-wide text-brand-black">
+      <a href="biombo.html" class="font-black underline underline-offset-4" aria-current="page">Biombo</a>
+      <a href="proyectos.html" class="hover:underline underline-offset-4">Proyectos</a>
+      <a href="nosotrxs.html" class="hover:underline underline-offset-4">Sobre Nosotrxs</a>
+      <a href="tienda.html" class="hover:underline underline-offset-4">Tienda</a>
+      <a href="apoyanos.html" class="hover:underline underline-offset-4">¡Apóyanos!</a>
+      <a href="contacto.html" class="hover:underline underline-offset-4">Contacto</a>
     </div>
   </nav>
 
-  <header class="py-16 px-6 text-center max-w-4xl mx-auto">
-    <span class="bg-brand-yellow border border-brand-black/20 text-brand-black text-xs font-extrabold px-4 py-1.5 rounded-full uppercase tracking-widest shadow-sm">
+  <header class="py-16 px-6 text-center max-w-5xl mx-auto">
+    <span class="bg-brand-cream border-2 border-brand-black text-brand-black text-xs font-extrabold px-4 py-1.5 rounded-full uppercase tracking-widest shadow-sm">
       En Producción
     </span>
-    <h1 class="text-6xl md:text-8xl font-black mt-6 mb-6 text-brand-black">BIOMBO</h1>
-    <p class="text-brand-black/80 text-lg md:text-xl font-medium leading-relaxed">
 
+    <!-- Logo de Biombo con biombos a los lados que se despliegan al hacer hover -->
+    <div class="biombo-hero group mt-10 mb-8">
+        <div class="biombo-screen biombo-screen--left" aria-hidden="true">
+          <span class="biombo-panel" style="--i:0"></span>
+          <span class="biombo-panel" style="--i:1"></span>
+          <span class="biombo-panel" style="--i:2"></span>
+          <span class="biombo-panel" style="--i:3"></span>
+        </div>
+      <h1 class="biombo-logo">
+        <!-- Colocar el logo en assets/biombo/biombo-logo.png. Si no existe, se ve el texto. -->
+        <img src="../assets/biombo/biombo-logo.png" alt="Biombo" onerror="this.hidden=true; this.nextElementSibling.hidden=false;">
+        <span hidden class="text-6xl md:text-8xl font-black text-brand-cream">BIOMBO</span>
+      </h1>
+        <div class="biombo-screen biombo-screen--right" aria-hidden="true">
+          <span class="biombo-panel" style="--i:0"></span>
+          <span class="biombo-panel" style="--i:1"></span>
+          <span class="biombo-panel" style="--i:2"></span>
+          <span class="biombo-panel" style="--i:3"></span>
+        </div>
+    </div>
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean et nisi ipsum. Nulla non bibendum mi. Sed ultricies pulvinar purus.
-
+    <p class="text-brand-cream/90 text-lg md:text-xl font-medium leading-relaxed max-w-3xl mx-auto">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean et nisi ipsum. Nulla non bibendum mi. Sed ultricies pulvinar purus.
     </p>
   </header>
 
-  <section class="max-w-5xl mx-auto px-6 mb-16">
-    <div class="aspect-video bg-white border-2 border-brand-black/15 rounded-3xl shadow-lg flex items-center justify-center p-6">
-      <p class="text-brand-black/60 font-bold text-center">[ Tráiler Oficial de Biombo ]</p>
+  <section class="max-w-5xl mx-auto px-6 mb-20">
+    <div class="aspect-video bg-brand-black border-2 border-brand-cream/30 rounded-3xl shadow-2xl flex items-center justify-center p-6">
+      <p class="text-brand-cream/70 font-bold text-center">[ Tráiler Oficial de Biombo ]</p>
     </div>
   </section>
 
-  <section class="max-w-3xl mx-auto px-6 py-12 text-center border-t border-brand-black/15">
-    <h2 class="text-3xl font-black mb-3 text-brand-black">¿Deseas apoyar este proyecto?</h2>
-    <p class="text-brand-black/80 mb-6 font-medium">Puedes contribuir directamente a la financiación de Biombo.</p>
-    <a href="aportacion.html" class="inline-block bg-brand-yellow hover:bg-brand-gold text-brand-black border-2 border-brand-black/20 font-extrabold px-8 py-4 rounded-xl transition shadow-md">
-      Realizar una Aportación
+  <!-- MAKING OF -->
+  <section class="max-w-6xl mx-auto px-6 mb-20">
+    <h2 class="text-4xl md:text-5xl font-black text-brand-cream mb-2">Making of</h2>
+    <p class="text-brand-cream/80 font-medium mb-8">Detrás de cámara de Biombo.</p>
+    <div class="making-of-grid">
+      <figure class="making-of-item group" data-caption="Making of #1">
+        <!-- Reemplazar con assets/biombo/making-of/01.jpg -->
+        <img src="../assets/biombo/making-of/01.jpg" alt="Making of Biombo #1" loading="lazy" onerror="this.remove()">
+        <span class="making-of-placeholder">Foto 1</span>
+      </figure>
+      <figure class="making-of-item group" data-caption="Making of #2">
+        <!-- Reemplazar con assets/biombo/making-of/02.jpg -->
+        <img src="../assets/biombo/making-of/02.jpg" alt="Making of Biombo #2" loading="lazy" onerror="this.remove()">
+        <span class="making-of-placeholder">Foto 2</span>
+      </figure>
+      <figure class="making-of-item group" data-caption="Making of #3">
+        <!-- Reemplazar con assets/biombo/making-of/03.jpg -->
+        <img src="../assets/biombo/making-of/03.jpg" alt="Making of Biombo #3" loading="lazy" onerror="this.remove()">
+        <span class="making-of-placeholder">Foto 3</span>
+      </figure>
+      <figure class="making-of-item group" data-caption="Making of #4">
+        <!-- Reemplazar con assets/biombo/making-of/04.jpg -->
+        <img src="../assets/biombo/making-of/04.jpg" alt="Making of Biombo #4" loading="lazy" onerror="this.remove()">
+        <span class="making-of-placeholder">Foto 4</span>
+      </figure>
+      <figure class="making-of-item group" data-caption="Making of #5">
+        <!-- Reemplazar con assets/biombo/making-of/05.jpg -->
+        <img src="../assets/biombo/making-of/05.jpg" alt="Making of Biombo #5" loading="lazy" onerror="this.remove()">
+        <span class="making-of-placeholder">Foto 5</span>
+      </figure>
+      <figure class="making-of-item group" data-caption="Making of #6">
+        <!-- Reemplazar con assets/biombo/making-of/06.jpg -->
+        <img src="../assets/biombo/making-of/06.jpg" alt="Making of Biombo #6" loading="lazy" onerror="this.remove()">
+        <span class="making-of-placeholder">Foto 6</span>
+      </figure>
+      <figure class="making-of-item group" data-caption="Making of #7">
+        <!-- Reemplazar con assets/biombo/making-of/07.jpg -->
+        <img src="../assets/biombo/making-of/07.jpg" alt="Making of Biombo #7" loading="lazy" onerror="this.remove()">
+        <span class="making-of-placeholder">Foto 7</span>
+      </figure>
+      <figure class="making-of-item group" data-caption="Making of #8">
+        <!-- Reemplazar con assets/biombo/making-of/08.jpg -->
+        <img src="../assets/biombo/making-of/08.jpg" alt="Making of Biombo #8" loading="lazy" onerror="this.remove()">
+        <span class="making-of-placeholder">Foto 8</span>
+      </figure>
+      <figure class="making-of-item group" data-caption="Making of #9">
+        <!-- Reemplazar con assets/biombo/making-of/09.jpg -->
+        <img src="../assets/biombo/making-of/09.jpg" alt="Making of Biombo #9" loading="lazy" onerror="this.remove()">
+        <span class="making-of-placeholder">Foto 9</span>
+      </figure>
+      <figure class="making-of-item group" data-caption="Making of #10">
+        <!-- Reemplazar con assets/biombo/making-of/10.jpg -->
+        <img src="../assets/biombo/making-of/10.jpg" alt="Making of Biombo #10" loading="lazy" onerror="this.remove()">
+        <span class="making-of-placeholder">Foto 10</span>
+      </figure>
+    </div>
+  </section>
+
+  <!-- Lightbox de la galería -->
+  <div id="lightbox" class="fixed inset-0 z-[60] hidden items-center justify-center bg-brand-black/90 p-6" role="dialog" aria-modal="true" aria-label="Foto ampliada">
+    <button type="button" data-lightbox-close class="absolute top-4 right-6 text-brand-cream text-5xl leading-none font-light" aria-label="Cerrar">&times;</button>
+    <figure class="max-w-5xl w-full">
+      <img id="lightbox-img" src="" alt="" class="max-h-[80vh] mx-auto rounded-2xl shadow-2xl">
+      <figcaption id="lightbox-caption" class="text-brand-cream text-center font-bold mt-4"></figcaption>
+    </figure>
+  </div>
+
+  <section class="max-w-3xl mx-auto px-6 py-12 text-center border-t border-brand-cream/30">
+    <h2 class="text-3xl font-black mb-3 text-brand-cream">¿Deseas apoyar este proyecto?</h2>
+    <p class="text-brand-cream/85 mb-6 font-medium">Puedes contribuir directamente a la financiación de Biombo.</p>
+    <a href="apoyanos.html" class="inline-block bg-brand-yellow hover:bg-brand-gold text-brand-black border-2 border-brand-black font-extrabold px-8 py-4 rounded-xl transition shadow-md">
+      ¡Apóyanos!
     </a>
   </section>
 
   <script src="../js/main.js"></script>
 </body>
 </html>
-
